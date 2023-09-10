@@ -66,12 +66,13 @@ class Solution{
             // if(!map.containsKey(prefixSum)){
             //     map.put(prefixSum,i);
             // }
-            map.put(prefixSum, map.getOrDefault(prefixSum, i));
+            
 
             if(map.containsKey(prefixSum-k)){
                 int currentLength = i - map.get(prefixSum-k);
                  maxLength = Math.max(maxLength, currentLength);
             }
+            map.put(prefixSum, map.getOrDefault(prefixSum, i));
 
             
         }
