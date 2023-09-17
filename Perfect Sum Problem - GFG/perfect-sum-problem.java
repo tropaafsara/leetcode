@@ -29,7 +29,6 @@ class Solution{
 
 	public int perfectSum(int arr[],int n, int sum) 
 	{ 
-	    // Your code goes here
 	    //If(arr[i-1] > 0) => dp[i][0] = dp[i-1][0]
 //else If(arr[i-1] <= 0) => dp[i][0] = dp[i-1][0] + dp[i-1][0]; and this extra term will lead to extra +1. And this extra +1 will exist whenever arr[i-1] == 0. 
 //Thus increasing our answers by no. of zeroes whenever required.
