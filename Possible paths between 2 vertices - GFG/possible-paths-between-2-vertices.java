@@ -37,21 +37,19 @@ class Solution {
     // Function to count paths between two vertices in a directed graph.
     
     int count =0;
-    public void hasPath(ArrayList<ArrayList<Integer>> adj, int src, int dest, boolean[] vis){
+    public void hasPath(ArrayList<ArrayList<Integer>> adj, int src, int dest){
         if(src==dest){
             count++;
             return;
         }
-        vis[src] = true;
         for(int k : adj.get(src)){
-            hasPath(adj, k,dest,vis);
+            hasPath(adj, k,dest);
         }
     }
     public int countPaths(int V, ArrayList<ArrayList<Integer>> adj, int source,
                    int destination) {
         // Code here
-        boolean[] vis = new boolean[V];
-        hasPath(adj, source,destination,vis);
+        hasPath(adj, source,destination);
         return count;
         
     }
